@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="index, follow"/>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.maharentagreement.com/#organization",
+            "name": "MahaRentAgreement",
+            "url": "https://www.maharentagreement.com/",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Maharashtra"
+            }
+          },
+          {
+            "@type": "GovernmentService",
+            "@id": "https://www.maharentagreement.com/#service",
+            "name": "Registered Rent Agreement E-Registration",
+            "provider": {
+              "@id": "https://www.maharentagreement.com/#organization"
+            },
+            "serviceType": "Rent Agreement Registration",
+            "areaServed": [
+              { "@type": "City", "name": "Mumbai" },
+              { "@type": "City", "name": "Mumbai Suburban" },
+              { "@type": "City", "name": "Pune" },
+              { "@type": "City", "name": "Thane" },
+              { "@type": "City", "name": "Navi Mumbai" },
+              { "@type": "City", "name": "Nagpur" },
+              { "@type": "City", "name": "Nashik" }
+            ],
+            "description": "IGR-approved online rent agreement registration with doorstep biometric verification across Maharashtra."
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/hero.css"/>
+    <link rel="stylesheet" href="/assets/css/header.css"/>
+    <link rel="stylesheet" href="/assets/css/footer.css"/>
+    <link rel="stylesheet" href="/assets/css/start-process.css"/>
+    <link rel="stylesheet" href="/assets/css/agreement-pricing.css"/>
+    <link rel="stylesheet" href="/assets/css/why-us.css"/>
+    <link rel="stylesheet" href="/assets/css/doorstep-hero.css"/>
+    <link rel="stylesheet" href="/assets/css/online-rent-process.css"/>
+    <link rel="stylesheet" href="/assets/css/reviews.css"/>
+    <link rel="stylesheet" href="/assets/css/faq.css"/>
+    <link rel="stylesheet" href="/assets/css/bottom-bar.css"/>
+    <link rel="stylesheet" href="/assets/css/city-slider.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  </head>
+  <body>
+    <main>
+      {% include "header.njk" %}
+      {{ content | safe }}
+      {% include "bottom-bar.njk" %}
+      {% include
+      "footer.njk" %}
+    </main>
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup-modal" id="popupModal" role="dialog" aria-modal="true">
+      <button class="popup-close" id="popupClose" aria-label="Close popup">✕</button>
+      <div class="popup-glow"></div>
+      {% include "contact-form.njk" %}
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 700,
+        easing: "ease-out-cubic"
+      });
+    </script>
+    <script src="/assets/js/menu.js"></script>
+    <script src="/assets/js/faq.js"></script>
+    <script src="/assets/js/calculator.js"></script>
+    <script src="/assets/js/contact-popup.js"></script>
+  </body>
+</html>

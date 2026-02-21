@@ -1,0 +1,185 @@
+/* ================= PROCESS CTA PREMIUM ================= */
+.process-cta-premium {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  padding: 50px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.process-cta-inner {
+  max-width: 800px;
+  margin: 0 auto 70px;
+  position: relative;
+  z-index: 2;
+  animation: fade-up 0.6s ease-out both;
+}
+
+.process-cta-inner h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.process-cta-inner h2 strong {
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.process-desc strong {
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.process-desc {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.cta-btn-premium {
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-btn-premium::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.cta-btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+}
+
+.cta-btn-premium:hover::after {
+  transform: translateX(120%);
+}
+
+/* TRUST STRIP */
+
+.trust-strip-premium {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.trust-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid transparent;
+  padding: 35px 25px;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  animation: fade-up 0.6s ease-out both;
+}
+
+.trust-card:nth-child(1) { animation-delay: 0.08s; }
+.trust-card:nth-child(2) { animation-delay: 0.16s; }
+.trust-card:nth-child(3) { animation-delay: 0.24s; }
+.trust-card:nth-child(4) { animation-delay: 0.32s; }
+
+.trust-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.12);
+  border-color: rgba(79, 70, 229, 0.28);
+}
+
+.trust-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trust-card:hover .trust-icon {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+.trust-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.trust-card p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-cta-inner,
+  .trust-card {
+    animation: none;
+  }
+
+  .cta-btn-premium,
+  .cta-btn-premium::after,
+  .trust-icon {
+    transition: none;
+  }
+}
+@media (max-width: 900px) {
+  .trust-strip-premium {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-cta-inner h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 500px) {
+  .trust-strip-premium {
+    grid-template-columns: 1fr;
+  }
+
+  .process-cta-premium {
+    padding: 40px 20px;
+  }
+}

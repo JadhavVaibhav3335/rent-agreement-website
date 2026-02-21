@@ -1,0 +1,15 @@
+---
+layout: area.njk
+pagination:
+  data: areas
+  size: 1
+  alias: area
+permalink: "agreement-{{ area.slug }}/index.html"
+eleventyComputed:
+  title: "Rent Agreement in {{ area.name }} | IGR-Approved Online Registration"
+  description: "Register your rent agreement in {{ area.name }} with doorstep biometric verification, transparent pricing, and IGR-approved legal process across Maharashtra."
+  areaName: "{{ area.name }}"
+  areaSlug: "{{ area.slug }}"
+  areaCityName: "{{ area.cityName }}"
+  areaCitySlug: "{{ area.citySlug }}"
+---

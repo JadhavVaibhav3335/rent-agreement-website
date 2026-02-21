@@ -1,0 +1,72 @@
+<section class="service-areas-strip" aria-label="Rent agreement service areas in Maharashtra">
+  {% set currentGroup = null %}
+  {% if city and city.slug %}
+    {% for group in cityAreas %}
+      {% if group.citySlug == city.slug %}
+        {% set currentGroup = group %}
+      {% endif %}
+    {% endfor %}
+  {% elif area and area.citySlug %}
+    {% for group in cityAreas %}
+      {% if group.citySlug == area.citySlug %}
+        {% set currentGroup = group %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <div class="service-areas-wrap">
+    <p class="service-areas-kicker">Maharashtra Coverage</p>
+    <h2>Rent Agreement Service Areas in Maharashtra</h2>
+    <p class="service-areas-copy">
+      IGR-approved online rent agreement registration with doorstep biometric support across major cities and local areas.
+    </p>
+
+    <nav class="service-areas-nav" aria-label="Major city service pages">
+      <ul class="service-areas-list">
+        <li><a href="/mumbai/">Mumbai</a></li>
+        <li><a href="/mumbai-suburban/">Mumbai Suburban</a></li>
+        <li><a href="/pune/">Pune</a></li>
+        <li><a href="/thane/">Thane</a></li>
+        <li><a href="/navi-mumbai/">Navi Mumbai</a></li>
+        <li><a href="/nagpur/">Nagpur</a></li>
+        <li><a href="/nashik/">Nashik</a></li>
+      </ul>
+    </nav>
+
+    <section class="major-localities" aria-label="Major areas under each city">
+      {% if currentGroup %}
+        <h3>Major Areas in {{ currentGroup.cityName }}</h3>
+        <ul class="localities-list">
+          {% for area in currentGroup.areas %}
+            <li><a href="/agreement-{{ area }}/">{{ area | replace("-", " ") }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <div class="related-cities">
+          <h4>Explore More City Pages</h4>
+          <ul class="related-cities-list">
+            {% for group in cityAreas %}
+              {% if group.citySlug != currentGroup.citySlug %}
+                <li><a href="/{{ group.citySlug }}/">Rent Agreement in {{ group.cityName }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% else %}
+        <h3>Major Areas Under Each City</h3>
+        <div class="city-areas-grid">
+          {% for group in cityAreas %}
+            <article class="city-areas-card">
+              <h4><a href="/{{ group.citySlug }}/">{{ group.cityName }}</a></h4>
+              <ul class="localities-list">
+                {% for area in group.areas %}
+                  <li><a href="/agreement-{{ area }}/">{{ area | replace("-", " ") }}</a></li>
+                {% endfor %}
+              </ul>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </section>
+  </div>
+</section>

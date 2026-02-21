@@ -1,0 +1,13 @@
+---
+layout: city.njk
+pagination:
+  data: cities
+  size: 1
+  alias: city
+permalink: "{{ city.slug }}/index.html"
+eleventyComputed:
+  title: "{{ city.metaTitle }}"
+  description: "{{ city.metaDescription }}"
+  cityName: "{{ city.name }}"
+  citySlug: "{{ city.slug }}"
+---

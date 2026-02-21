@@ -1,0 +1,103 @@
+
+:root {
+  --bottom-bar-offset: 88px;
+}
+
+.bottom-contact-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #47a1e2, #4f46e5);
+  color: white;
+  z-index: 9999;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.25);
+}
+
+.bottom-bar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.bottom-bar-text {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.bottom-bar-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.bottom-bar-actions a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Buttons */
+.bottom-call-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: white;
+}
+
+.bottom-call-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.bottom-whatsapp-btn {
+  background: #25D366;
+  color: #042f1a;
+}
+
+.bottom-whatsapp-btn:hover {
+  background: #1ebe5b;
+}
+
+.bottom-contact-btn {
+  background: white;
+  color: #0f3c5c;
+}
+
+.bottom-contact-btn:hover {
+  background: #e6f0f7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --bottom-bar-offset: 136px;
+  }
+
+  .bottom-bar-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    
+  }
+
+  .bottom-bar-text {
+    font-size: 14px;
+  }
+
+  .bottom-bar-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bottom-bar-actions a {
+    flex: 1;
+    text-align: center;
+  }
+}

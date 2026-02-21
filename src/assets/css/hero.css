@@ -1,0 +1,283 @@
+.hero-premium {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.hero-premium-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT */
+
+.hero-premium-left {
+  animation: fadeSlideLeft 0.9s ease forwards;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-premium-left h1 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+}
+
+.hero-premium-left h1 span {
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-premium-left p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #475569;
+  max-width: 520px;
+}
+
+.hero-premium-features {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  font-weight: 500;
+}
+
+.hero-premium-features li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.hero-premium-features li:hover {
+  transform: translateX(6px);
+}
+
+.hero-primary-cta {
+  margin-top: 18px;
+}
+
+.hero-main-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.3);
+}
+
+.hero-main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(22, 163, 74, 0.35);
+}
+
+/* FORM */
+
+.hero-premium-form {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+  animation: fadeSlideRight 0.9s ease forwards;
+}
+
+.hero-premium-form h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.form-subtitle {
+  margin-top: 6px;
+  font-size: 24px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.hero-premium-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  margin-bottom: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.hero-premium-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  transform: scale(1.01);
+}
+
+.hero-premium-form button {
+  width: 100%;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hero-premium-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.4);
+}
+
+/* ================= RESPONSIVE FIXES ================= */
+
+/* Tablets & below */
+@media (max-width: 1024px) {
+  .hero-premium-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-premium {
+    padding: 100px 20px;
+  }
+
+  .hero-premium-left h1 {
+    font-size: 40px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .hero-premium {
+    padding: 80px 16px 60px;
+  }
+
+  .hero-premium-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-premium-left h1 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .hero-premium-left p {
+    font-size: 15px;
+  }
+
+  .hero-premium-features li {
+    font-size: 14px;
+  }
+
+  .hero-main-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .hero-premium-form {
+    padding: 24px;
+  }
+
+  .hero-premium-form h2 {
+    font-size: 20px;
+  }
+
+  .hero-premium-form input {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .hero-premium-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-premium-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .hero-premium-left p {
+    font-size: 14px;
+  }
+
+  .hero-premium-form {
+    padding: 20px;
+  }
+}
+
+/* Ultra small devices */
+@media (max-width: 360px) {
+  .hero-premium-left h1 {
+    font-size: 24px;
+  }
+
+  .hero-premium-form h2 {
+    font-size: 18px;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}

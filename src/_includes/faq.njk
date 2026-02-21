@@ -1,0 +1,145 @@
+{% set locationName = "" %}
+{% if city and city.name %}
+  {% set locationName = city.name %}
+{% elif area and area.cityName %}
+  {% set locationName = area.cityName %}
+{% endif %}
+{% set localGroup = null %}
+{% if locationName %}
+  {% for group in cityAreas %}
+    {% if group.cityName == locationName %}
+      {% set localGroup = group %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="faq-container">
+
+    <header class="faq-header">
+      <h2>Frequently Asked Questions</h2>
+      {% if locationName %}
+        <p>Local FAQs for rent agreement registration in {{ locationName }}</p>
+      {% else %}
+        <p>Official information about Rent Agreement Registration Services in Maharashtra</p>
+      {% endif %}
+    </header>
+
+    <div class="faq-grid">
+
+      <div class="faq-col">
+
+        {% if locationName %}
+          <article class="faq-item active" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="true">
+              <span itemprop="name">Do you provide doorstep biometric service in {{ locationName }}?</span>
+              <i class="chevron"></i>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">
+                Yes. We provide doorstep biometric support across key neighborhoods in {{ locationName }}, subject to slot availability.
+              </p>
+            </div>
+          </article>
+        {% else %}
+          <article class="faq-item active" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="true">
+              <span itemprop="name">What is stamp duty for rent agreement registration in Maharashtra?</span>
+              <i class="chevron"></i>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">
+                Stamp duty in Maharashtra is calculated based on rent amount, deposit, and agreement tenure. The exact value changes with transaction details, and registration fees are applied separately as per current state rules.
+              </p>
+            </div>
+          </article>
+        {% endif %}
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question">
+            {% if locationName %}
+              <span itemprop="name">How long does rent agreement registration take in {{ locationName }}?</span>
+            {% else %}
+              <span itemprop="name">How long does rent agreement registration take in Maharashtra?</span>
+            {% endif %}
+            <i class="chevron"></i>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+              Most applications are processed within 24 hours after complete documents and biometric verification are submitted. Timelines can vary on government portal load and appointment availability.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question">
+            <span itemprop="name">What documents are needed for rent agreement registration?</span>
+            <i class="chevron"></i>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+              Landlord and tenant Aadhaar, PAN, property address details, ownership proof, and witness information are typically required. Additional documents may apply based on property type and profile.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="faq-col">
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question">
+            {% if locationName %}
+              <span itemprop="name">Is rent agreement registration mandatory in {{ locationName }}?</span>
+            {% else %}
+              <span itemprop="name">Is rent agreement registration mandatory in Maharashtra?</span>
+            {% endif %}
+            <i class="chevron"></i>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+              Agreements of more than 11 months must be registered under Maharashtra law. Registration also improves legal enforceability for both landlord and tenant.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question">
+            <span itemprop="name">Is your process IGR approved?</span>
+            <i class="chevron"></i>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+              Yes. The agreement workflow follows the official IGR-compatible e-registration process with required biometric verification and legally valid documentation standards.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question">
+            {% if localGroup %}
+              <span itemprop="name">Which major localities do you cover in {{ locationName }}?</span>
+            {% else %}
+              <span itemprop="name">Do you provide doorstep biometric service across Maharashtra?</span>
+            {% endif %}
+            <i class="chevron"></i>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+              {% if localGroup %}
+                We cover major areas in {{ locationName }} including
+                {% for areaSlug in localGroup.areas %}
+                  {{ areaSlug | replace("-", " ") }}{% if not loop.last %}, {% endif %}
+                {% endfor %}.
+              {% else %}
+                Yes. We offer doorstep biometric support in major cities and nearby service zones across Maharashtra, subject to slot availability.
+              {% endif %}
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+[
+  {
+    "cityName": "Mumbai",
+    "citySlug": "mumbai",
+    "areas": [
+      "andheri-west",
+      "andheri-east",
+      "bandra",
+      "borivali-west",
+      "powai",
+      "worli",
+      "chembur",
+      "ghatkopar-east"
+    ]
+  },
+  {
+    "cityName": "Pune",
+    "citySlug": "pune",
+    "areas": [
+      "baner",
+      "hinjewadi",
+      "katraj",
+      "kothrud",
+      "kharadi",
+      "wakad",
+      "hadapsar",
+      "viman-nagar"
+    ]
+  },
+  {
+    "cityName": "Nashik",
+    "citySlug": "nashik",
+    "areas": [
+      "nashik"
+    ]
+  },
+  {
+    "cityName": "Thane",
+    "citySlug": "thane",
+    "areas": [
+      "thane",
+      "kalyan",
+      "dombivli",
+      "ulhasnagar",
+      "mira-road",
+      "bhayandar"
+    ]
+  },
+  {
+    "cityName": "Navi Mumbai",
+    "citySlug": "navi-mumbai",
+    "areas": [
+      "vashi",
+      "nerul",
+      "belapur",
+      "cbd-belapur",
+      "seawoods",
+      "ghansoli",
+      "airoli",
+      "kopar-khairane",
+      "kamothe",
+      "kalamboli",
+      "panvel"
+    ]
+  },
+  {
+    "cityName": "Nagpur",
+    "citySlug": "nagpur",
+    "areas": [
+      "nagpur"
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+<div class="hero-premium-left">
+  <span class="hero-badge">IGR-Approved E-Registration • 24-Hour Approval • Doorstep Biometric</span>
+  <h1>
+    {% if serviceHeading %}
+      {{ serviceHeading }}
+      <br>
+        <span>{{ serviceSubheading | default("Doorstep Biometric & Fast Legal Registration") }}</span>
+    {% elif area and area.name %}
+      Rent Agreement in {{ area.name }}
+      <br>
+        <span>Doorstep Biometric & Fast Legal Registration</span>
+    {% elif city and city.name %}
+      Rent Agreement in {{ city.name }}
+      <br>
+        <span>Doorstep Biometric & Fast Legal Registration</span>
+    {% else %}
+      Maharashtra Registered Rent Agreement
+      <br>
+        <span>Your Trusted State-Wide Hub</span>
+    {% endif %}
+    </h1>
+    <p>
+      {% if serviceDescription %}
+        {{ serviceDescription }}
+      {% elif area and area.heroText %}
+        {{ area.heroText }}
+      {% elif city and city.heroText %}
+        {{ city.heroText }}
+      {% else %}
+        Register your
+        <strong>Leave and License agreement</strong>
+        through the official IGR process from any city in Maharashtra. Get fast support, legal compliance, and
+        <strong>doorstep biometric verification</strong>
+        from a single trusted platform.
+      {% endif %}
+    </p>
+    <ul class="hero-premium-features">
+      <li>✔ IGR-Approved Process Across Maharashtra</li>
+      <li>✔ 24-Hour Approval Support for Complete Applications</li>
+      <li>✔ Doorstep Biometric in Major Cities and Nearby Areas</li>
+      {% if city and city.name %}
+        <li>✔ Book Biometric in {{ city.name }} Today</li>
+      {% elif area and area.name %}
+        <li>✔ Book Biometric in {{ area.name }} Today</li>
+      {% elif serviceCtaLabel %}
+        <li>✔ {{ serviceCtaLabel }}</li>
+      {% else %}
+        <li>✔ Get Started Anywhere in Maharashtra</li>
+      {% endif %}
+    </ul>
+    <div class="hero-primary-cta">
+      {% if city and city.name %}
+        <a href="#" class="hero-main-btn open-popup-btn">Book Biometric in {{ city.name }} Today</a>
+      {% elif area and area.name %}
+        <a href="#" class="hero-main-btn open-popup-btn">Book Biometric in {{ area.name }} Today</a>
+      {% elif serviceCtaLabel %}
+        <a href="#" class="hero-main-btn open-popup-btn">{{ serviceCtaLabel }}</a>
+      {% else %}
+        <a href="#" class="hero-main-btn open-popup-btn">Get Started Anywhere</a>
+      {% endif %}
+    </div>
+  </div>

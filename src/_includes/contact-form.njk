@@ -1,0 +1,23 @@
+<div class="hero-premium-form">
+  {% if city and city.name %}
+    <h2>Register Rent Agreement in {{ city.name }} Today</h2>
+    <p class="form-subtitle">Complete your legal rent agreement process in {{ city.name }}.</p>
+  {% elif area and area.name %}
+    <h2>Register Rent Agreement in {{ area.name }} Today</h2>
+    <p class="form-subtitle">Fast local support for rent agreement service in {{ area.name }}.</p>
+  {% else %}
+    <h2>Register Rent Agreement Online Now</h2>
+    <p class="form-subtitle">Our experts will contact you for official rent agreement service.</p>
+  {% endif %}
+  <form id="leadForm">
+    <input type="text" placeholder="Your Name">
+      <input type="tel" placeholder="Phone Number" required="required">
+        {% if city and city.name %}
+          <button type="submit">Register Rent Agreement in {{ city.name }}</button>
+        {% elif area and area.name %}
+          <button type="submit">Register Rent Agreement in {{ area.name }}</button>
+        {% else %}
+          <button type="submit">Get Started Anywhere</button>
+        {% endif %}
+      </form>
+    </div>

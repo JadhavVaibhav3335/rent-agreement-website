@@ -1,0 +1,259 @@
+/* ================= PREMIUM PRICING ================= */
+.premium-pricing {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 70px;
+}
+
+.pricing-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* PREMIUM CARDS */
+
+.premium-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.15);
+}
+
+/* LEFT PLAN */
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.price-amount {
+  font-size: 44px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.price-label {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.features li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.features li:hover {
+  transform: translateX(6px);
+}
+
+.premium-btn {
+  display: inline-block;
+  margin-top: 25px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.premium-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+}
+
+/* RIGHT CHECKER */
+
+.price-checker h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.checker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* PREMIUM INPUT DESIGN */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  font-size: 14.5px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Focus state */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  transform: scale(1.01);
+  background: #ffffff;
+}
+
+/* Readonly / auto fields */
+
+.form-group input[readonly] {
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* Placeholder */
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+/* Premium dropdown arrow */
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%236366f1' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 42px;
+}
+
+/* TOTAL BOX */
+
+.total-box {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ===== MOBILE PRICE CHECKER ===== */
+
+/* Tablets & below */
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .agreement-pricing {
+    padding: 70px 16px;
+  }
+
+  .pricing-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pricing-plan {
+    padding: 24px;
+  }
+
+  .price-checker {
+    padding: 24px;
+  }
+
+  .checker-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .price-checker h3 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .total-box {
+    margin-top: 20px;
+    padding: 16px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Small phones (iPhone SE etc.) */
+@media (max-width: 480px) {
+  .agreement-pricing {
+    padding: 20px 14px;
+  }
+
+  .pricing-plan {
+    padding: 20px;
+  }
+
+  .price-checker {
+    padding: 20px;
+  }
+
+  .price-checker h3 {
+    font-size: 18px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 13.5px;
+    padding: 11px 12px;
+  }
+
+  .total-box {
+    font-size: 13px;
+  }
+}

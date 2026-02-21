@@ -1,0 +1,121 @@
+
+/* ================= Online rentagreement PROCESS SECTION ================= */
+.ultra-process {
+  padding: 50px 20px;
+  background: radial-gradient(circle at top, #eef2ff, #f8fafc);
+  position: relative;
+  overflow: hidden;
+}
+
+.ultra-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.ultra-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.ultra-subtitle {
+  color: #64748b;
+  margin-top: 10px;
+  margin-bottom: 90px;
+  font-size: 17px;
+}
+
+.ultra-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 100px;
+  column-gap: 100px;
+}
+
+.ultra-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #6366f1, #3b82f6);
+  border-radius: 20px;
+}
+
+.ultra-step {
+  display: flex;
+  align-items: center;
+}
+
+.ultra-step.left {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.ultra-step.right {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.ultra-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 30px 32px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.ultra-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(21, 21, 21, 0.25);
+}
+
+.step-no {
+  position: absolute;
+  top: -18px;
+  right: 20px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ultra-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.ultra-card p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .ultra-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .ultra-line {
+    left: 20px;
+  }
+
+  .ultra-step {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding-left: 40px;
+  }
+}
+

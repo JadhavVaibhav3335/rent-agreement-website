@@ -1,0 +1,105 @@
+ 
+ <!======== review  ===========>
+<section class="trust-reviews">
+  <div class="reviews-container">
+    {% if city and city.name %}
+      <h2>Customer Reviews from {{ city.name }}</h2>
+      <p class="subtitle">Verified local feedback from landlords, tenants & property owners in {{ city.name }}</p>
+    {% elif area and area.cityName %}
+      <h2>Customer Reviews from {{ area.cityName }}</h2>
+      <p class="subtitle">Verified local feedback from nearby areas and {{ area.cityName }} renters</p>
+    {% else %}
+      <h2>Trusted by Thousands Across Maharashtra</h2>
+      <p class="subtitle">Verified feedback from landlords, tenants & property owners</p>
+    {% endif %}
+
+    <div class="reviews-grid">
+      {% if city and city.slug == "pune" %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Doorstep biometric in Pune was smooth and on-time."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=12" alt="Rohit Deshmukh"><div><strong>Rohit Deshmukh</strong><br><span>Landlord • Pune</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"The team handled everything clearly for our Wakad property."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=58" alt="Arjun Pawar"><div><strong>Arjun Pawar</strong><br><span>Landlord • Pune</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Fast turnaround and proper legal support in Pune."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=18" alt="Amit Patil"><div><strong>Amit Patil</strong><br><span>Property Owner • Pune</span></div></div></article>
+      {% elif city and city.slug == "mumbai" %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Transparent charges and professional handling for my Mumbai agreement."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=27" alt="Neha Kulkarni"><div><strong>Neha Kulkarni</strong><br><span>Tenant • Mumbai</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Highly professional team. I felt legally secure throughout."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=17" alt="Rajiv Mehta"><div><strong>Rajiv Mehta</strong><br><span>Landlord • Mumbai</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Biometric appointment in Andheri was arranged quickly."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=41" alt="Karan Shah"><div><strong>Karan Shah</strong><br><span>Tenant • Mumbai</span></div></div></article>
+      {% elif city and city.slug == "thane" %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Very reliable service. They handled all legal steps correctly."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=30" alt="Sneha Joshi"><div><strong>Sneha Joshi</strong><br><span>Tenant • Thane</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Quick support for our registration in Thane."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=36" alt="Nikhil More"><div><strong>Nikhil More</strong><br><span>Landlord • Thane</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Smooth process and clear communication from start to finish."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=43" alt="Priya Nair"><div><strong>Priya Nair</strong><br><span>Tenant • Thane</span></div></div></article>
+      {% elif city and city.slug == "navi-mumbai" %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Excellent support in Navi Mumbai with proper legal checks."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=50" alt="Vikas Jadhav"><div><strong>Vikas Jadhav</strong><br><span>Landlord • Navi Mumbai</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Biometric was completed on time in Vashi."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=53" alt="Ritika Saini"><div><strong>Ritika Saini</strong><br><span>Tenant • Navi Mumbai</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Process was simple and very well coordinated."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=44" alt="Sagar Patil"><div><strong>Sagar Patil</strong><br><span>Property Owner • Navi Mumbai</span></div></div></article>
+      {% elif city and city.slug == "nagpur" %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Great experience with rent agreement registration in Nagpur."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=49" alt="Aniket Deshpande"><div><strong>Aniket Deshpande</strong><br><span>Landlord • Nagpur</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Clear pricing and proper legal steps throughout."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=60" alt="Kavya Pande"><div><strong>Kavya Pande</strong><br><span>Tenant • Nagpur</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Fast support and documents delivered as promised."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=61" alt="Rohan Borkar"><div><strong>Rohan Borkar</strong><br><span>Property Owner • Nagpur</span></div></div></article>
+      {% elif city and city.slug == "nashik" %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Everything was explained clearly. No confusion, no delays."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=18" alt="Amit Patil"><div><strong>Amit Patil</strong><br><span>Property Owner • Nashik</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Quick and reliable assistance for Nashik registration."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=62" alt="Mitali More"><div><strong>Mitali More</strong><br><span>Tenant • Nashik</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Doorstep biometric support was convenient and professional."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=63" alt="Siddharth Kale"><div><strong>Siddharth Kale</strong><br><span>Landlord • Nashik</span></div></div></article>
+      {% else %}
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"The entire rent agreement process was smooth and legally compliant. Doorstep biometric was extremely convenient."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=12" alt="Rohit Deshmukh"><div><strong>Rohit Deshmukh</strong><br><span>Landlord • Pune</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Transparent charges and professional handling. I received my registered agreement on time."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=27" alt="Neha Kulkarni"><div><strong>Neha Kulkarni</strong><br><span>Tenant • Mumbai</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Everything was explained clearly. No confusion, no delays."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=18" alt="Amit Patil"><div><strong>Amit Patil</strong><br><span>Property Owner • Nashik</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="0"><div class="review-stars">★★★★★</div><p class="review-text">"Very reliable service. They handled all legal steps correctly."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=30" alt="Sneha Joshi"><div><strong>Sneha Joshi</strong><br><span>Tenant • Thane</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80"><div class="review-stars">★★★★★</div><p class="review-text">"Highly professional team. I felt legally secure throughout the process."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=17" alt="Rajiv Mehta"><div><strong>Rajiv Mehta</strong><br><span>Landlord • Mumbai</span></div></div></article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160"><div class="review-stars">★★★★★</div><p class="review-text">"Support was prompt and my biometric appointment was arranged without hassle."</p><div class="review-user"><img src="https://i.pravatar.cc/150?img=58" alt="Arjun Pawar"><div><strong>Arjun Pawar</strong><br><span>Landlord • Pune</span></div></div></article>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MahaRentAgreement",
+  "url": "https://www.maharentagreement.com/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "6",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Rohit Deshmukh" },
+      "reviewBody": "The entire rent agreement process was smooth and legally compliant. Doorstep biometric was extremely convenient.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Neha Kulkarni" },
+      "reviewBody": "Transparent charges and professional handling. I received my registered agreement on time.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Amit Patil" },
+      "reviewBody": "Everything was explained clearly. No confusion, no delays.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sneha Joshi" },
+      "reviewBody": "Very reliable service. They handled all legal steps correctly.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Rajiv Mehta" },
+      "reviewBody": "Highly professional team. I felt legally secure throughout the process.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Arjun Pawar" },
+      "reviewBody": "Support was prompt and my biometric appointment was arranged without hassle.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    }
+  ]
+}
+</script>

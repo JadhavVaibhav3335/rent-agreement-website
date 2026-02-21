@@ -1,0 +1,107 @@
+
+/*------------- WHY US SECTION -----------------------------*/
+.why-us-premium {
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.why-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 70px;
+  color: #0f172a;
+}
+
+.why-title span {
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-grid-premium {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+
+.why-card-premium {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(14px);
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  transform-style: preserve-3d;
+}
+
+.why-card-premium:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 0 1px rgba(7, 7, 7, 0.2),
+              0 30px 80px rgba(3, 3, 3, 0.35);
+  scale: 1.05;
+}
+
+/* ICON */
+
+.why-icon-premium {
+  width: 70px;
+  height: 70px;
+  margin: auto auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-icon-premium svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+.why-card-premium h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.why-card-premium p {
+  font-size: 14px;
+  color: #475569;
+}
+.why-icon-premium {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(99,102,241,0.4);
+}
+
+.why-icon-premium svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 900px) {
+  .why-grid-premium {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .why-grid-premium {
+    grid-template-columns: 1fr;
+  }
+}
+
