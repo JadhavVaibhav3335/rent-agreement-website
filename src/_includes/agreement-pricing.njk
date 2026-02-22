@@ -22,31 +22,31 @@
       <h3>Smart Rent Agreement Price Checker</h3>
       <div class="checker-grid">
         <div class="form-group">
-          <label>Period of Agreement (months)</label>
+          <label for="period-months">Period of Agreement (months)</label>
           <input id="period-months" type="number" placeholder="e.g. 11"/>
         </div>
         <div class="form-group">
-          <label>Stamp Duty (0.25%)</label>
+          <label for="stamp-duty">Stamp Duty (0.25%)</label>
           <input id="stamp-duty" type="text" value="₹ 500" readonly="readonly"/>
         </div>
         <div class="form-group">
-          <label>Monthly Rent (₹)</label>
+          <label for="user-rent">Monthly Rent (₹)</label>
           <input id="user-rent" type="number" placeholder="e.g. 25000"/>
         </div>
         <div class="form-group">
-          <label>Registration Charges + DHC</label>
-          <input type="text" value="₹ 1000 + ₹ 300 = ₹ 1300" readonly="readonly"/>
+          <label for="registration-charge">Registration Charges + DHC</label>
+          <input id="registration-charge" type="text" value="₹ 1000 + ₹ 300 = ₹ 1300" readonly="readonly"/>
         </div>
         <div class="form-group">
-          <label>Security Deposit (₹)</label>
+          <label for="user-deposit">Security Deposit (₹)</label>
           <input id="user-deposit" type="number" placeholder="e.g. 100000"/>
         </div>
         <div class="form-group">
-          <label>Authorised Service Charges</label>
-          <input type="text" value="₹ 1000" readonly="readonly"/>
+          <label for="service-charge">Authorised Service Charges</label>
+          <input id="service-charge" type="text" value="₹ 1000" readonly="readonly"/>
         </div>
         <div class="form-group">
-          <label>City for Biometric First Visit</label>
+          <label for="visit-city1">City for Biometric First Visit</label>
           <select id="visit-city1">
             <option value="1">Pune</option>
             <option value="2">Mumbai</option>
@@ -66,7 +66,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label>City for Biometric Second Visit (optional)</label>
+          <label for="visit-city2">City for Biometric Second Visit (optional)</label>
           <select id="visit-city2">
             <option value="">-- No Second Visit --</option>
             <option value="1">Pune</option>
@@ -87,11 +87,11 @@
           </select>
         </div>
         <div class="form-group">
-          <label>First Visit Charges</label>
+          <label for="visit-charge1">First Visit Charges</label>
           <input id="visit-charge1" type="text" value="₹ 0" readonly="readonly"/>
         </div>
         <div class="form-group">
-          <label>Second Visit Charges</label>
+          <label for="visit-charge2">Second Visit Charges</label>
           <input id="visit-charge2" type="text" value="—" readonly="readonly"/>
         </div>
       </div>
@@ -100,8 +100,7 @@
           <span id="total-price">3,100</span>
         </strong>
         <div class="WhatsApp-btn">
-          <a href="https://wa.me/911234567890" target="_blank" class="drawer-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
+          <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="drawer-whatsapp" aria-label="Chat on WhatsApp">
             WhatsApp
           </a>
         </div>

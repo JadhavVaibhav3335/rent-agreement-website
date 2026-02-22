@@ -2,7 +2,7 @@
   const popupOverlay = document.getElementById("popupOverlay");
   const popupModal = document.getElementById("popupModal");
   const popupClose = document.getElementById("popupClose");
-  const leadForm = document.getElementById("leadForm");
+  const leadForm = popupModal ? popupModal.querySelector("form") : null;
 
   if (!popupOverlay || !popupModal || !popupClose) return;
 

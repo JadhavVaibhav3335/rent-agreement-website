@@ -1,3 +1,7 @@
+{% set _formId = formId | default("leadForm") %}
+{% set _nameId = nameId | default("leadName") %}
+{% set _phoneId = phoneId | default("leadPhone") %}
+
 <div class="hero-premium-form">
   {% if city and city.name %}
     <h2>Register Rent Agreement in {{ city.name }} Today</h2>
@@ -9,15 +13,17 @@
     <h2>Register Rent Agreement Online Now</h2>
     <p class="form-subtitle">Our experts will contact you for official rent agreement service.</p>
   {% endif %}
-  <form id="leadForm">
-    <input type="text" placeholder="Your Name">
-      <input type="tel" placeholder="Phone Number" required="required">
-        {% if city and city.name %}
-          <button type="submit">Register Rent Agreement in {{ city.name }}</button>
-        {% elif area and area.name %}
-          <button type="submit">Register Rent Agreement in {{ area.name }}</button>
-        {% else %}
-          <button type="submit">Get Started Anywhere</button>
-        {% endif %}
-      </form>
-    </div>
+  <form id="{{ _formId }}">
+    <label class="sr-only" for="{{ _nameId }}">Your Name</label>
+    <input id="{{ _nameId }}" name="name" type="text" placeholder="Your Name" autocomplete="name" required="required">
+    <label class="sr-only" for="{{ _phoneId }}">Phone Number</label>
+    <input id="{{ _phoneId }}" name="phone" type="tel" placeholder="Phone Number" autocomplete="tel" inputmode="tel" required="required">
+    {% if city and city.name %}
+      <button type="submit">Register Rent Agreement in {{ city.name }}</button>
+    {% elif area and area.name %}
+      <button type="submit">Register Rent Agreement in {{ area.name }}</button>
+    {% else %}
+      <button type="submit">Get Started Anywhere</button>
+    {% endif %}
+  </form>
+</div>

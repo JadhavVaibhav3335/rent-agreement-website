@@ -6,6 +6,8 @@
     <meta name="description" content="{{ description }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="robots" content="index, follow"/>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://i.pravatar.cc" crossorigin>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -45,18 +47,32 @@
     <link rel="stylesheet" href="/assets/css/style.css"/>
     <link rel="stylesheet" href="/assets/css/hero.css"/>
     <link rel="stylesheet" href="/assets/css/header.css"/>
-    <link rel="stylesheet" href="/assets/css/footer.css"/>
-    <link rel="stylesheet" href="/assets/css/start-process.css"/>
-    <link rel="stylesheet" href="/assets/css/agreement-pricing.css"/>
-    <link rel="stylesheet" href="/assets/css/why-us.css"/>
-    <link rel="stylesheet" href="/assets/css/doorstep-hero.css"/>
-    <link rel="stylesheet" href="/assets/css/online-rent-process.css"/>
-    <link rel="stylesheet" href="/assets/css/reviews.css"/>
-    <link rel="stylesheet" href="/assets/css/faq.css"/>
-    <link rel="stylesheet" href="/assets/css/bottom-bar.css"/>
-    <link rel="stylesheet" href="/assets/css/city-slider.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="preload" href="/assets/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/start-process.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/agreement-pricing.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/why-us.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/doorstep-hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/online-rent-process.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/reviews.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/faq.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/bottom-bar.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/city-slider.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript>
+      <link rel="stylesheet" href="/assets/css/footer.css"/>
+      <link rel="stylesheet" href="/assets/css/start-process.css"/>
+      <link rel="stylesheet" href="/assets/css/agreement-pricing.css"/>
+      <link rel="stylesheet" href="/assets/css/why-us.css"/>
+      <link rel="stylesheet" href="/assets/css/doorstep-hero.css"/>
+      <link rel="stylesheet" href="/assets/css/online-rent-process.css"/>
+      <link rel="stylesheet" href="/assets/css/reviews.css"/>
+      <link rel="stylesheet" href="/assets/css/faq.css"/>
+      <link rel="stylesheet" href="/assets/css/bottom-bar.css"/>
+      <link rel="stylesheet" href="/assets/css/city-slider.css"/>
+    </noscript>
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" crossorigin onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript>
+      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    </noscript>
   </head>
   <body>
     <main>
@@ -67,22 +83,28 @@
       "footer.njk" %}
     </main>
     <div class="popup-overlay" id="popupOverlay"></div>
-    <div class="popup-modal" id="popupModal" role="dialog" aria-modal="true">
+    <div class="popup-modal" id="popupModal" role="dialog" aria-modal="true" aria-label="Rent agreement enquiry form">
       <button class="popup-close" id="popupClose" aria-label="Close popup">✕</button>
       <div class="popup-glow"></div>
+      {% set formId = "leadForm" %}
+      {% set nameId = "popupLeadName" %}
+      {% set phoneId = "popupLeadPhone" %}
       {% include "contact-form.njk" %}
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        once: true,
-        duration: 700,
-        easing: "ease-out-cubic"
+      window.addEventListener("DOMContentLoaded", () => {
+        if (!window.AOS) return;
+        AOS.init({
+          once: true,
+          duration: 700,
+          easing: "ease-out-cubic"
+        });
       });
     </script>
-    <script src="/assets/js/menu.js"></script>
-    <script src="/assets/js/faq.js"></script>
-    <script src="/assets/js/calculator.js"></script>
-    <script src="/assets/js/contact-popup.js"></script>
+    <script defer src="/assets/js/menu.js"></script>
+    <script defer src="/assets/js/faq.js"></script>
+    <script defer src="/assets/js/calculator.js"></script>
+    <script defer src="/assets/js/contact-popup.js"></script>
   </body>
 </html>

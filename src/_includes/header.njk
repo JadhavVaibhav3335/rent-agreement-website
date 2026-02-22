@@ -19,19 +19,19 @@
     <!-- Right CTA -->
     <div class="header-actions">
       <div class="call-box">
-        <i class="fa-solid fa-phone"></i>
+        <span aria-hidden="true">Call</span>
         <div class="call-text">
           <span>Make a Call</span>
           <a href="tel:+911234567890" class="call-header"> +91-1234567890 </a>
         </div>
       </div>
 
-      <a href="https://wa.me/911234567890" target="_blank" class="whatsapp-btn">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+        WhatsApp
       </a>
 
       <!-- Mobile Menu -->
-      <button class="hamburger" id="menuToggle">
+      <button class="hamburger" id="menuToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
         <span></span>
         <span></span>
         <span></span>
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <button class="drawer-close" id="drawerClose">✕</button>
+    <button class="drawer-close" id="drawerClose" aria-label="Close mobile menu">✕</button>
   </div>
 
   <nav class="drawer-nav">
@@ -68,9 +68,9 @@
   </nav>
 
   <div class="drawer-actions">
-    <a href="https://wa.me/911234567890" target="_blank" class="drawer-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="drawer-whatsapp" aria-label="Chat on WhatsApp">
+      WhatsApp
     </a>
-    <a href="tel:+911234567890" class="drawer-call"> <i class="fa-solid fa-phone"></i> Call Now </a>
+    <a href="tel:+911234567890" class="drawer-call">Call Now</a>
   </div>
 </aside>

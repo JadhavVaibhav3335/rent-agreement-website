@@ -1,10 +1,16 @@
 
-document.querySelectorAll('.faq-question').forEach(button => {
+const faqQuestions = document.querySelectorAll('.faq-question');
+const faqItems = document.querySelectorAll('.faq-item');
+
+if (!faqQuestions.length || !faqItems.length) {
+  // FAQ section is not present on this page.
+} else {
+faqQuestions.forEach(button => {
   button.addEventListener('click', () => {
     const item = button.closest('.faq-item');
     const isOpen = item.classList.contains('active');
 
-    document.querySelectorAll('.faq-item').forEach(i => {
+    faqItems.forEach(i => {
       i.classList.remove('active');
       i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
     });
@@ -19,7 +25,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
 // Mobile swipe open
 let startY = 0;
 
-document.querySelectorAll('.faq-item').forEach(item => {
+faqItems.forEach(item => {
   item.addEventListener('touchstart', e => {
     startY = e.touches[0].clientY;
   });
@@ -31,4 +37,5 @@ document.querySelectorAll('.faq-item').forEach(item => {
     }
   });
 });
+}
 
