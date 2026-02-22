@@ -9,8 +9,16 @@ function toTitleCaseFromSlug(slug) {
 }
 
 const areaToCity = new Map();
+const allSlugs = new Set(places);
+
 for (const group of cityAreas) {
+  allSlugs.add(group.citySlug);
+  areaToCity.set(group.citySlug, {
+    citySlug: group.citySlug,
+    cityName: group.cityName,
+  });
   for (const area of group.areas) {
+    allSlugs.add(area);
     areaToCity.set(area, {
       citySlug: group.citySlug,
       cityName: group.cityName,
@@ -18,7 +26,7 @@ for (const group of cityAreas) {
   }
 }
 
-module.exports = places.map((slug) => {
+module.exports = Array.from(allSlugs).map((slug) => {
   const mapped = areaToCity.get(slug);
   return {
     slug,
